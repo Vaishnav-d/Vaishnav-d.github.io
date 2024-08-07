@@ -1,0 +1,221 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background: url('headerbgimage.jpg') no-repeat center center;
+    background-size: cover;
+    color: #fff;
+    padding: 2rem 0;
+    text-align: center;
+    position: relative;
+    height: 120px;
+    width: 100%;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    font-weight: bold;
+    position: relative;
+    z-index: 1; /* Ensures the text is on top of the background */
+}
+
+header p {
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+}
+
+.highlight {
+    font-size: 3rem; /* Adjust size as needed */
+    font-weight: bold;
+    padding: 10px 20px;
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.7); /* Darker shadow for better contrast */
+    color: #fff; /* Ensure the text color contrasts with the background */
+}
+
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+    background: #333;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: inline-block;
+    transition: background 0.3s ease;
+}
+
+nav ul li a:hover {
+    background: #ff7e5f;
+    border-radius: 5px;
+}
+
+section {
+    padding: 2rem;
+    margin: 0 auto;
+    max-width: 1000px;
+    background: #fff;
+    margin-top: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 1rem;
+    position: relative;
+    display: inline-block;
+}
+
+section h2::after {
+    content: '';
+    width: 50px;
+    height: 3px;
+    background: #ff7e5f;
+    display: block;
+    margin: 10px auto;
+}
+
+ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+.experience-item, .project-item {
+    margin-bottom: 20px;
+    background: #f9f9f9;
+    padding: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+    text-align: center;
+    padding: 1rem 0;
+    background: #333;
+    color: #fff;
+    margin-top: 2rem;
+}
+
+.banner {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Space between blocks */
+    justify-content: center; /* Center blocks horizontally */
+    margin: 0 auto;
+}
+
+/* Individual skill block */
+.skill-item {
+    background-color: #f0f0f0; /* Light grey background */
+    border-radius: 15px; /* Rounded corners */
+    padding: 10px 15px; /* Space inside the block */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Light shadow for a lifted effect */
+    color: #333; /* Text color */
+    font-size: 1.1rem; /* Adjust font size as needed */
+    text-align: center; /* Center the text */
+    flex: 1 1 calc(33% - 20px); /* Adjust block size and spacing */
+    max-width: 300px; /* Maximum width of the block */
+    box-sizing: border-box; /* Includes padding and border in the element's total width and height */
+    transition: all 0.3s ease;
+}
+
+/* Hover effect */
+.skill-item:hover {
+    background-color: #e0e0e0; /* Slightly darker grey background */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* More pronounced shadow */
+    transform: scale(1.05); /* Slightly increase the size of the block */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .skill-item {
+        flex: 1 1 calc(50% - 20px); /* Two blocks per row on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .skill-item {
+        flex: 1 1 100%; /* One block per row on very small screens */
+    }
+}
+
+.experience-item {
+    background: #f9f9f9;
+    padding: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.experience-item:hover {
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    transform: translateY(-10px); /* Slides the item up */
+}
+
+.project-item {
+    position: relative;
+    background: #f9f9f9; /* Light background */
+    padding: 1rem;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.project-item::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    transition: border-color 0.3s ease;
+}
+
+.project-item:hover::after {
+    border-color: #ff7e5f; /* Accent color for the border */
+}
+
+.project-item {
+    background: #f9f9f9;
+    padding: 1rem;
+    border-radius: 5px;
+    transform: translateY(10px);
+    opacity: 0.9;
+    transition: all 0.3s ease;
+}
+
+.project-item:hover {
+    transform: translateY(0);
+    opacity: 1;
+}
