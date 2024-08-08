@@ -7,10 +7,28 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <style>
+        /* Additional CSS for resume section */
+        
+        #resume-section {
+            display: none;
+            padding: 2rem;
+            margin: 1rem auto;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 794px; /* Width of A4 */
+        }
+
+        /* Make iframe A4 size */
+        #resume-iframe {
+            width: 794px; /* Width of A4 */
+            height: 900px; /* Height of A4 */
+            border: none;
         .container {
             display: flex;
             justify-content: space-between;
         }
+    }
         .list {
             list-style-type: disc;
             margin: 0;
@@ -35,8 +53,73 @@
             <li><a href="#experience">Experience</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#contact">Contact</a></li>
+            <li><a href="#resume" id="resume-link">Resume</a></li>
         </ul>
     </nav>
+    <div class="container">
+    <div class="sidebar">
+        <h2>Sidebar Content</h2>
+        <p>Add your sidebar content here (e.g., links, bio, etc.)</p>
+        <aside class="sidebar">
+            <h2>Skills</h2>
+            <div class="skill">
+                <span>Python</span>
+                <div class="rating">
+                    <span class="star full"></span>
+                    <span class="star full"></span>
+                    <span class="star full"></span>
+                    <span class="star half"></span>
+                    <span class="star empty"></span>
+                </div>
+            </div>
+            <div class="skill">
+                <span>SQL</span>
+                <div class="rating">
+                    <span class="star full"></span>
+                    <span class="star full"></span>
+                    <span class="star full"></span>
+                    <span class="star full"></span>
+                    <span class="star empty"></span>
+                </div>
+            </div>
+            <div class="skill">
+                <span>ML</span>
+                <div class="rating">
+                    <span class="star full"></span>
+                    <span class="star full"></span>
+                    <span class="star half"></span>
+                    <span class="star empty"></span>
+                    <span class="star empty"></span>
+                </div>
+            </div>
+            <div class="skill">
+                <span>Excel</span>
+                <div class="rating">
+                    <span class="star full"></span>
+                    <span class="star full"></span>
+                    <span class="star full"></span>
+                    <span class="star full"></span>
+                    <span class="star full"></span>
+                </div>
+            </div>
+            <div class="skill">
+                <span>PowerBI</span>
+                <div class="rating">
+                    <span class="star full"></span>
+                    <span class="star full"></span>
+                    <span class="star full"></span>
+                    <span class="star empty"></span>
+                    <span class="star empty"></span>
+                </div>
+            </div>
+        </aside>
+        
+    </div>
+    <div class ='main-content'>
+    <section id="resume-section">
+        <h2>My Resume</h2>
+        <iframe id="resume-iframe" src="resume.pdf"></iframe>  
+    </section>
     <section id="home">
         <h2>Welcome to My Portfolio</h2>
         <img src="banner.jpg" alt="Banner Image" class="banner">
@@ -149,5 +232,18 @@
     <footer>
         <p>&copy; 2024 Vaishnav Kumar. All rights reserved.</p>
     </footer>
+    <script>
+        document.getElementById('resume-link').addEventListener('click', function(event) {
+            event.preventDefault();
+            var resumeSection = document.getElementById('resume-section');
+            if (resumeSection.style.display === 'none' || resumeSection.style.display === '') {
+                resumeSection.style.display = 'block';
+            } else {
+                resumeSection.style.display = 'none';
+            }
+        });
+    </script>
+    </div>
+</div>
 </body>
 </html>

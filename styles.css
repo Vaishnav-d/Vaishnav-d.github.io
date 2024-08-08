@@ -3,12 +3,12 @@ body {
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
+    background-color: #121212;
+    color: #e0e0e0;
 }
 
 header {
-    background: url('headerbgimage.jpg') no-repeat center center;
+    background: url('image_2.jpeg') no-repeat center center;
     background-size: cover;
     color: #fff;
     padding: 2rem 0;
@@ -41,7 +41,6 @@ header p {
     color: #fff; /* Ensure the text color contrasts with the background */
 }
 
-
 nav ul {
     list-style: none;
     padding: 0;
@@ -56,7 +55,7 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #fff;
+    color: #e0e0e0;
     text-decoration: none;
     padding: 10px 20px;
     display: inline-block;
@@ -72,15 +71,15 @@ section {
     padding: 2rem;
     margin: 0 auto;
     max-width: 1000px;
-    background: #fff;
+    background: #1f1f1f;
     margin-top: 1rem;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 section h2 {
     text-align: center;
-    color: #333;
+    color: #e0e0e0;
     margin-bottom: 1rem;
     position: relative;
     display: inline-block;
@@ -102,17 +101,17 @@ ul {
 
 .experience-item, .project-item {
     margin-bottom: 20px;
-    background: #f9f9f9;
+    background: #333;
     padding: 1rem;
     border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
 }
 
 footer {
     text-align: center;
     padding: 1rem 0;
     background: #333;
-    color: #fff;
+    color: #e0e0e0;
     margin-top: 2rem;
 }
 
@@ -126,30 +125,26 @@ footer {
 .skills-container {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px; /* Space between blocks */
-    justify-content: center; /* Center blocks horizontally */
     margin: 0 auto;
 }
 
 /* Individual skill block */
 .skill-item {
-    background-color: #f0f0f0; /* Light grey background */
+    background-color: #555; /* Dark grey background */
     border-radius: 15px; /* Rounded corners */
-    padding: 10px 15px; /* Space inside the block */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Light shadow for a lifted effect */
-    color: #333; /* Text color */
+    padding: 0.5rem 1rem; /* Space inside the block */
+    margin: 0.5rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); /* Light shadow for a lifted effect */
+    color: #e0e0e0; /* Text color */
     font-size: 1.1rem; /* Adjust font size as needed */
     text-align: center; /* Center the text */
-    flex: 1 1 calc(33% - 20px); /* Adjust block size and spacing */
-    max-width: 300px; /* Maximum width of the block */
-    box-sizing: border-box; /* Includes padding and border in the element's total width and height */
     transition: all 0.3s ease;
 }
 
 /* Hover effect */
 .skill-item:hover {
-    background-color: #e0e0e0; /* Slightly darker grey background */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* More pronounced shadow */
+    background-color: #666; /* Slightly darker grey background */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7); /* More pronounced shadow */
     transform: scale(1.05); /* Slightly increase the size of the block */
 }
 
@@ -167,26 +162,26 @@ footer {
 }
 
 .experience-item {
-    background: #f9f9f9;
+    background: #333;
     padding: 1rem;
     border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
     transition: all 0.3s ease;
     position: relative;
 }
 
 .experience-item:hover {
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.7);
     transform: translateY(-10px); /* Slides the item up */
 }
 
 .project-item {
     position: relative;
-    background: #f9f9f9; /* Light background */
+    background: #333; /* Dark background */
     padding: 1rem;
     border-radius: 5px;
     overflow: hidden;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
     transition: all 0.3s ease;
 }
 
@@ -206,16 +201,119 @@ footer {
     border-color: #ff7e5f; /* Accent color for the border */
 }
 
-.project-item {
-    background: #f9f9f9;
-    padding: 1rem;
-    border-radius: 5px;
-    transform: translateY(10px);
-    opacity: 0.9;
-    transition: all 0.3s ease;
-}
-
 .project-item:hover {
     transform: translateY(0);
     opacity: 1;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+    background: #333;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #e0e0e0;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: inline-block;
+    transition: background 0.3s ease;
+}
+
+nav ul li a:hover {
+    background: #ff7e5f;
+    border-radius: 5px;
+}
+
+.container {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+}
+.sidebar {
+    position: fixed;
+    top: 250px; /* Ensure the sidebar starts below the header */
+    left: 0;
+    width: 250px; /* Adjust as needed */
+    height: calc(100vh - 120px); /* Full height minus the header height */
+    background-color: #1f1f1f;
+    color: #e0e0e0;
+    padding: 1rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+.main-content {
+    margin-left: 250px;
+    flex: 3 1 750px;
+    padding: 1rem;
+    background: #121212;
+    color: #e0e0e0;
+    overflow-y: auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+header, nav, section, footer {
+    margin-bottom: 1rem;
+}
+
+
+.sidebar {
+    position: fixed;
+    top: 250px; /* Adjust according to header height */
+    left: 0;
+    width: 250px;
+    height: calc(100vh - 120px);
+    background-color: #333;
+    color: #fff;
+    padding: 1rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Skill section */
+.skill {
+    margin-bottom: 1rem;
+}
+
+.skill span {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+/* Rating stars */
+.rating {
+    display: flex;
+}
+
+.star {
+    width: 20px;
+    height: 20px;
+    background: url('star.svg') no-repeat center center;
+    background-size: contain;
+    margin-right: 2px;
+}
+
+.star.full {
+    background: url('star_full.png') no-repeat center center;
+    background-size: contain;
+}
+
+.star.half {
+    background: url('star_half.png') no-repeat center center;
+    background-size: contain;
+}
+
+.star.empty {
+    background: url('star_empty.png') no-repeat center center;
+    background-size: contain;
 }
