@@ -28,6 +28,7 @@
             transition: all 0.3s ease;
         }
         .skill-box {
+            
             border-radius: 8px;
             transition: all 0.3s ease;
         }
@@ -56,6 +57,21 @@
             box-shadow: 0 0 15px rgba(0, 255, 0, 0.5);
             transform: translateY(-5px);
         }
+        .resume-section {
+            display: none;
+            padding: 2rem;
+            margin: 1rem auto;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 100%; /* Responsive A4 */
+        }
+        .resume-iframe {
+            width: 100%;
+            height: calc(100vh - 100px); /* Adjust height to fit screen */
+            border: none;
+        }
+    
     </style>
 </head>
 <body class="min-h-screen flex flex-col">
@@ -71,6 +87,7 @@
             <li><button onclick="showPage('experience')" class="neon-hover px-3 py-2 rounded">Experience</button></li>
             <li><button onclick="showPage('projects')" class="neon-hover px-3 py-2 rounded">Projects</button></li>
             <li><button onclick="showPage('certification')" class="neon-hover px-3 py-2 rounded">Certification</button></li>
+            <li><button onclick="showPage('resume')" class="neon-hover px-3 py-2 rounded">Resume</button></li>
             <li><button onclick="showPage('contact')" class="neon-hover px-3 py-2 rounded">Contact</button></li>
         </ul>
     </nav>
@@ -83,24 +100,24 @@
             <div class="about-item bg-gray-800 p-6 rounded-lg shadow-lg mb-4">
                     <p>I specialize in Microsoft Technologies, particularly SQL Server Management Studio (SSMS), SQL Profiler, and SQL Server Integration Services (SSIS). My expertise covers all stages of the Software Development Life Cycle (SDLC), including analysis, design, development, and deployment of business applications.</p>    
         </div>
-        <h2 class="text-2xl font-bold mb-4">Skills</h2>
+        <h2 class="text-2xl  font-bold mb-4">Skills</h2>
                 <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
                     
-                    <div class="skill-box bg-gray-800 p-4 text-center">MSSQL/T-SQL</div>
-                    <div class="skill-box bg-gray-800 p-4 text-center">MYSQL</div>
-                    <div class="skill-box bg-gray-800 p-4 text-center">DBMS & RDBMS</div>
-                    <div class="skill-box bg-gray-800 p-4 text-center">Stored Procedures</div>
-                    <div class="skill-box bg-gray-800 p-4 text-center">SQL Profiler</div>
-                    <div class="skill-box bg-gray-800 p-4 text-center">SSIS/ETL</div>
-                    <div class="skill-box bg-gray-800 p-4 text-center">Database Design</div>
-                    <div class="skill-box bg-gray-800 p-4 text-center">Database Modelling</div>
-                    <div class="skill-box bg-gray-800 p-4 text-center">Query Optimization</div>
-                    <div class="skill-box bg-gray-800 p-4 text-center">Python</div>
-                    <div class="skill-box bg-gray-800 p-4 text-center">Power BI</div>
-                    <div class="skill-box bg-gray-800 p-4 text-center">Data Warehousing</div>
-                    <div class="skill-box bg-gray-800 p-4 text-center">Performance Tuning</div>
-                    <div class="skill-box bg-gray-800 p-4 text-center">Statistical Analysis</div>
-                    <div class="skill-box bg-gray-800 p-4 text-center">Machine Leaning Models </div>
+                    <div class="skill-box bg-gray-800  p-4 text-center">MSSQL/T-SQL</div>
+                    <div class="skill-box bg-gray-800  p-4 text-center">MYSQL</div>
+                    <div class="skill-box bg-gray-800  p-4 text-center">DBMS & RDBMS</div>
+                    <div class="skill-box bg-gray-800  p-4 text-center">Stored Procedures</div>
+                    <div class="skill-box bg-gray-800  p-4 text-center">SQL Profiler</div>
+                    <div class="skill-box bg-gray-800  p-4 text-center">SSIS/ETL</div>
+                    <div class="skill-box bg-gray-800  p-4 text-center">Database Design</div>
+                    <div class="skill-box bg-gray-800  p-4 text-center">Database Modelling</div>
+                    <div class="skill-box bg-gray-800  p-4 text-center">Query Optimization</div>
+                    <div class="skill-box bg-gray-800  p-4 text-center">Python</div>
+                    <div class="skill-box bg-gray-800  p-4 text-center">Power BI</div>
+                    <div class="skill-box bg-gray-800  p-4 text-center">Data Warehousing</div>
+                    <div class="skill-box bg-gray-800  p-4 text-center">Performance Tuning</div>
+                    <div class="skill-box bg-gray-800  p-4 text-center">Statistical Analysis</div>
+                    <div class="skill-box bg-gray-800  p-4 text-center">Machine Leaning Models </div>
 
                 </div>
                 <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
@@ -228,6 +245,23 @@
             </p>
             </div>
         </div>
+        
+        <div id="resume" class="page">
+            <h2 class="text-3xl font-bold mb-4">Resume</h2>
+            <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+                <h2>My Resume</h2>
+                <!-- Responsive iframe for resume viewing -->
+                <iframe class="resume-iframe" id="resume-iframe" src="resume.pdf"></iframe>
+
+                <!-- Button to download resume -->
+                <div class="text-center mt-4">
+                    <a href="resume.pdf" download="Vaishnav_Kumar_Resume.pdf" class="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded inline-flex items-center">
+                        <i class="bi bi-download mr-2"></i> Download Resume
+                    </a>
+                </div>
+            </div>
+        </div>
+
 
         <div id="contact" class="page">
             <h2 class="text-3xl font-bold mb-4">Contact</h2>
@@ -250,6 +284,19 @@
             });
             document.getElementById(pageId).classList.add('active');
         }
+    </script>
+
+
+    <script>
+        document.getElementById('resume-link').addEventListener('click', function(event) {
+            event.preventDefault();
+            var resumeSection = document.getElementById('resume-section');
+            if (resumeSection.style.display === 'none' || resumeSection.style.display === '') {
+                resumeSection.style.display = 'block';
+            } else {
+                resumeSection.style.display = 'none';
+            }
+        });
     </script>
 </body>
 </html>
